@@ -1,0 +1,13 @@
+/* src/Footer.css */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+  z-index: 1000; /* Ensure it stays on top of content */
+}

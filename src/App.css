@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+/* src/App.css */
+body {
+  margin: 0;
+  padding-bottom: 60px; /* Adjust based on footer height */
+  font-family: Arial, sans-serif; /* Example font for consistency */
+}
