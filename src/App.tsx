@@ -1,36 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './styles/tailwind.css';
-import './App.css'
+import { useState } from 'react';
+import InputFields from './components/input_fields'; // Import the InputFields component
 
 function App() {
-  const [count, setCount] = useState(0)
+  // Function to handle form submission
+  const handleSubmit = (task: { date: string; time: string; priority: string; description: string }) => {
+    console.log('Task Submitted:', task);
+    // Add logic to save the task or display it, for example:
+    // setTasks([...tasks, task]);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="App">
+      {/* Render the InputFields component */}
+      <InputFields onSubmit={handleSubmit} />
+    </div>
+  );
 }
 
-export default App
+export default App;
